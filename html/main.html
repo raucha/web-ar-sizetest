@@ -13,7 +13,7 @@
     <v-container>
       <p>表示モデル選択</p>
       <v-row>
-        <v-col cols="4" md="4">
+        <v-col cols="4" sm="20">
           <v-card>
             <v-checkbox v-model="show_box" label="BOXを表示" v-on:change="postVal"></v-checkbox>
             <v-text-field v-model="qr_size" label="QRコードの1辺の長さ[m]" v-on:change="postVal"></v-text-field>
@@ -22,7 +22,7 @@
             <v-text-field v-model="box_h" label="Box height[m]" v-on:change="postVal"></v-text-field>
           </v-card>
         </v-col>
-        <v-col cols="4" md="4">
+        <v-col cols="4" sm="20">
           <v-card>
             <v-checkbox v-model="show_obj" label="objファイルを表示" v-on:change="postVal"></v-checkbox>
             <v-file-input v-model="file" show-size counter label="OBJファイル(ASCII)" accept=".obj"
@@ -34,7 +34,7 @@
           </v-card>
         </v-col>
         </v-col>
-        <v-col cols="4" md="4">
+        <v-col cols="4" sm="20">
           <v-card>
             <v-checkbox v-model="show_gltf" label="glTFファイルを表示" v-on:change="postVal"></v-checkbox>
             ※ 不調、表示されない。
