@@ -2,7 +2,8 @@ var app = new Vue({
   el: '#sceneid',
   data: {
     message: 'hellow Vue!',
-    box_scale: "1 1 1"
+    box_scale: "1 1 1",
+    box_pos: "0 0.5 0"
   },
   methods: {
     receiveMessage (event) {

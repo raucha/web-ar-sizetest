@@ -17,7 +17,7 @@
 
     <a-marker preset="custom" type="pattern" url="./asset/url-qr.patt">
     <!-- <a-marker preset='hiro'> -->
-      <a-box v-bind:position='box_pos' v-bind:scale="box_scale" wireframe="true" wireframe-linewidth="5" metalness=1
+      <a-box v-bind:position='box_pos' v-bind:scale="box_scale" wireframe="false" wireframe-linewidth="5" metalness=1
         material='opacity: 0.9;'></a-box>
       <a-text position='0 0.5 0' v-bind:value="message"></a-text>
       <a-entity position='0 0.5 0' gltf-model="#tree"></a-entity>
