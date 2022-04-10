@@ -11,8 +11,22 @@
 <body>
   <v-app id="app-10">
     <v-container>
+      <p><a href="./asset/url-qr.png">QRコード</a></p>
+      <br>
       <p>表示モデル選択</p>
       <v-row>
+
+        <v-col cols="4" sm="20">
+          <v-card>
+            <v-checkbox v-model="show_obj" label="objファイルを表示" v-on:change="postVal"></v-checkbox>
+            <v-file-input v-model="file" show-size counter label="upload(*.obj, ASCII)" accept=".obj" loading="true"
+              rounded="true" shaped="true" @change="onChangeFileInput">
+            </v-file-input>
+            <v-text-field v-model="obj_scale" label="倍率" v-on:change="postVal"></v-text-field>
+            <!-- <v-btn dark outlined rounded color="primary" :style="btnStyle" @click="onClickUploadFileBtn">ファイルアップロード
+          </v-btn> -->
+          </v-card>
+        </v-col>
         <v-col cols="4" sm="20">
           <v-card>
             <v-checkbox v-model="show_box" label="BOXを表示" v-on:change="postVal"></v-checkbox>
@@ -20,17 +34,6 @@
             <v-text-field v-model="box_w" label="Box width[m]" v-on:change="postVal"></v-text-field>
             <v-text-field v-model="box_d" label="Box depth[m]" v-on:change="postVal"></v-text-field>
             <v-text-field v-model="box_h" label="Box height[m]" v-on:change="postVal"></v-text-field>
-          </v-card>
-        </v-col>
-        <v-col cols="4" sm="20">
-          <v-card>
-            <v-checkbox v-model="show_obj" label="objファイルを表示" v-on:change="postVal"></v-checkbox>
-            <v-file-input v-model="file" show-size counter label="OBJファイル(ASCII)" accept=".obj"
-              @change="onChangeFileInput">
-            </v-file-input>
-            <v-text-field v-model="obj_scale" label="倍率" v-on:change="postVal"></v-text-field>
-            <!-- <v-btn dark outlined rounded color="primary" :style="btnStyle" @click="onClickUploadFileBtn">ファイルアップロード
-          </v-btn> -->
           </v-card>
         </v-col>
         </v-col>
