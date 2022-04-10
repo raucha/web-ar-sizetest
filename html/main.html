@@ -1,7 +1,37 @@
-<head></head>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta http-equiv="content-type" charset="UTF-8">
+  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
 <body>
-  <p>asdf</p>
-<iframe src="./index.html" width="1000" height="800">
-この部分はインラインフレームを使用してます。
-</iframe>
+  <v-app id="app-10">
+    <v-container>
+      <p>入力欄</p>
+      QRの1辺の長さ[m]: <input v-model="qr_size" placeholder="edit me">
+      <v-text-field v-model="qr_size" label="QR size[m]"></v-text-field>
+      <v-col cols="4" md="4">
+        <v-text-field v-model="box_w" label="Box width"></v-text-field>
+        <v-text-field v-model="box_d" label="Box depth"></v-text-field>
+        <v-text-field v-model="box_h" label="Box height"></v-text-field>
+      </v-col>
+      <hr>
+    </v-container>
+    <p>出力欄</p>
+    <p>Message is: {{ qr_size }}</p>
+    <p>Message is: {{ box_w }}</p>
+    <p>Message is: {{ box_d }}</p>
+    <p>Message is: {{ box_h }}</p>
+    <iframe src="./view.html" width="1000" height="800" id="iframeid">
+      この部分はインラインフレームを使用してます。
+    </iframe>
+  </v-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="main.js"></script>
 </body>
