@@ -3,7 +3,8 @@ var app10 = new Vue({
   vuetify: new Vuetify(),
   data: {
     // qr_size: 0.207, //url
-    qr_size: 0.057, //hiro
+    // qr_size: 0.057, //hiro
+    qr_size: 0.108, //印刷
     box_w: 0.1,
     box_d: 0.1,
     box_h: 0.1,
